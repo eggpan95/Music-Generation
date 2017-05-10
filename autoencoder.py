@@ -170,12 +170,12 @@ if train:
 			if epoch % 1 == 0:
 				print ("Epoch:", '%04d' % (epoch+1), "cost=", \
 					"{:.9f}".format(avg_cost))
-				save_path = saver.save(sess, "C:/Users/Cooridinate home/Documents/tushhar/2xt/2xt/projects/tensorflow/deep learning/Music/tmp/model.ckpt")
+				save_path = saver.save(sess, "/Documents/tushhar/2xt/2xt/projects/tensorflow/deep learning/Music/tmp/model.ckpt")
 				print("Model saved in file: %s" % save_path)
 		print ("Optimization Finished!")
 
-		# wavfile.write("C:/Users/Cooridinate home/Documents/tushhar/2xt/2xt/projects/tensorflow/deep learning/Music/tmp/predictedsong.wav",,denormalised)
-		# save_path = saver.save(sess, "C:/Users/Cooridinate home/Documents/tushhar/2xt/2xt/projects/tensorflow/deep learning/Music/tmp/model.ckpt")
+		# wavfile.write("/Documents/tushhar/2xt/2xt/projects/tensorflow/deep learning/Music/tmp/predictedsong.wav",,denormalised)
+		# save_path = saver.save(sess, "/Documents/tushhar/2xt/2xt/projects/tensorflow/deep learning/Music/tmp/model.ckpt")
 		# print("Model saved in file: %s" % save_path)
 		# plt.show()
 
@@ -193,7 +193,7 @@ if test:
 	testsong = numpy.zeros([1,1])
 
 	with tf.Session() as sess:
-		saver.restore(sess, "C:/Users/Cooridinate home/Documents/tushhar/2xt/2xt/projects/tensorflow/deep learning/Music/tmp/model.ckpt")
+		saver.restore(sess, "/Documents/tushhar/2xt/2xt/projects/tensorflow/deep learning/Music/tmp/model.ckpt")
 		print("Model restored.")
 		writer = tf.summary.FileWriter('./graphs',sess.graph)
 		for k in range(100):
